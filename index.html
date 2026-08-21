@@ -8,9 +8,9 @@
       name="description"
       content="Portfolio professionnel de Toussaint Koffi, développeur junior passionné par le web"
     />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
 
-    <link rel="stylesheet" href="font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="assets/font/bootstrap-icons.css" />
   </head>
 
   <body class="dark">
@@ -18,9 +18,7 @@
     <header>
       <nav>
         <h1 class="logo">
-          <a href="#home"
-            ><span class="span1">T.K</span><span class="span2">ode</span></a
-          >
+          <a href="#home"><img src="assets/img/WhatsApp%20Image%202026-08-20%20at%2023.42.30.jpeg" alt="Logo T.KODE" /></a>
         </h1>
         <button class="menu-toggle" id="menuToggle" title="Menu">
           <span></span>
@@ -33,6 +31,7 @@
           </li>
           <li class="item"><a href="#about">A propos</a></li>
           <li class="item"><a href="#projects">Projets</a></li>
+          <li class="item"><a href="certifications.html">Certifications</a></li>
           <li class="item"><a href="#contact">Contact</a></li>
         </ul>
         <i
@@ -48,7 +47,7 @@
       <!-- Home section -->
       <section class="section1" id="home">
         <div class="image">
-          <img src="img/photo.png" class="photo" alt="Ma photo de profil" />
+          <img src="assets/img/WhatsApp Image 2026-08-21 at 01.00.04.jpeg" class="photo" alt="Ma photo de profil" />
         </div>
         <div class="description">
           <div>
@@ -110,7 +109,7 @@
             <!-- contact  buttons -->
             <div class="contact">
               <a href="#contact" class="contacter">Me contacter</a>
-              <a href="img/Curriculum Vitae.pdf" class="bouton" target="_blank"
+              <a href="assets/docs/tkode.pdf" class="bouton" target="_blank" rel="noopener"
                 >Télécharger CV <i class="bi bi-download"></i
               ></a>
             </div>
@@ -124,7 +123,7 @@
           <h1 class="title">À propos de moi</h1>
           <p class="profil">
             Je suis <strong>Kouame Toussaint Koffi</strong>, étudiant en
-            Informatique Développeur d'Application (<i>BTS 2A</i>), passionné
+            Informatique Développeur d'Application (<i>Admissible au BTS session 2026</i>), passionné
             par la technologie, la programmation et l'innovation numérique.
             <br />
             <br />
@@ -140,15 +139,15 @@
 
           <!-- Resume menu tabs -->
           <ul class="resumes">
-            <li class="resume active" onclick="afficher('competence')">
+            <li class="resume active" onclick="afficher('competence', this)">
               Compétences
             </li>
-            <li class="resume" onclick="afficher('formation')">Formation</li>
-            <li class="resume" onclick="afficher('langue')">Langues</li>
-            <li class="resume" onclick="afficher('centres')">
+            <li class="resume" onclick="afficher('formation', this)">Formation</li>
+            <li class="resume" onclick="afficher('langue', this)">Langues</li>
+            <li class="resume" onclick="afficher('centres', this)">
               Centres d'intérêt
             </li>
-            <li class="resume" onclick="afficher('loisirs')">Loisirs</li>
+            <li class="resume" onclick="afficher('loisirs', this)">Loisirs</li>
           </ul>
 
           <!-- Content containers -->
@@ -161,22 +160,8 @@
                   <div class="info">
                     <div>HTML</div>
                     <div>CSS</div>
-                    <div>JavaScript</div>
-                    <div>PHP</div>
-                  </div>
-                  <div class="info">
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 70%"></div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 60%"></div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 25%"></div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 30%"></div>
-                    </div>
+                    <div>PHP <small>(notions)</small></div>
+                    <div>Bases de données <small>(Merise, notions SQL)</small></div>
                   </div>
                 </div>
               </div>
@@ -184,24 +169,11 @@
                 <h3>Outils & Logiciels</h3>
                 <div class="flex">
                   <div class="info">
+                    <div>GitHub & Git</div>
+                    <div>Bootstrap</div>
                     <div>VS Code</div>
-                    <div>Word</div>
-                    <div>Excel</div>
-                    <div>PowerPoint</div>
-                  </div>
-                  <div class="info">
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 80%"></div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 75%"></div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 35%"></div>
-                    </div>
-                    <div class="progress">
-                      <div class="progress-bar" style="width: 40%"></div>
-                    </div>
+                    <div>MS Word</div>
+                    <div>MS Excel <small>(notions)</small></div>
                   </div>
                 </div>
               </div>
@@ -271,6 +243,9 @@
                 <li>
                   <i class="bi bi-check-circle"></i> Communication efficace
                 </li>
+                <li>
+                  <i class="bi bi-robot"></i> Intelligence artificielle
+                </li>
               </ul>
             </div>
 
@@ -318,8 +293,8 @@
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
               </div>
-              <a href="#" class="project-link"
-                >Voir le projet <i class="bi bi-arrow-right"></i
+              <a href="#contact" class="project-link"
+                >Parler du projet <i class="bi bi-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -342,8 +317,8 @@
                 <span class="tag">JavaScript</span>
                 <span class="tag">MySQL</span>
               </div>
-              <a href="#" class="project-link"
-                >Voir le projet <i class="bi bi-arrow-right"></i
+              <a href="#contact" class="project-link"
+                >Parler du projet <i class="bi bi-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -366,8 +341,8 @@
                 <span class="tag">CSS</span>
                 <span class="tag">Responsive</span>
               </div>
-              <a href="#" class="project-link"
-                >Voir le projet <i class="bi bi-arrow-right"></i
+              <a href="#contact" class="project-link"
+                >Parler du projet <i class="bi bi-arrow-right"></i
               ></a>
             </div>
           </div>
@@ -505,6 +480,7 @@
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
             <li><a href="#projects">Projets</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -556,7 +532,7 @@
       }
 
       // Tab switching in projects section
-      function afficher(tabName) {
+      function afficher(tabName, button) {
         // Hide all tabs
         const allTabs = document.querySelectorAll(".tab-content");
         allTabs.forEach((tab) => tab.classList.remove("active"));
@@ -570,7 +546,7 @@
         // Update active button
         const buttons = document.querySelectorAll(".resume");
         buttons.forEach((btn) => btn.classList.remove("active"));
-        event.target.classList.add("active");
+        button.classList.add("active");
       }
 
       // Contact form handling
