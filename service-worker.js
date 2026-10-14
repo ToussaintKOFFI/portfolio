@@ -1,4 +1,4 @@
-const CACHE_NAME = "toussaint-portfolio-v7";
+const CACHE_NAME = "toussaint-portfolio-v8";
 const APP_SHELL = [
   "./",
   "./certifications/",
@@ -12,7 +12,7 @@ const APP_SHELL = [
   "./assets/font/fonts/bootstrap-icons.woff2",
   "./assets/img/icon-192.png",
   "./assets/img/icon-512.png",
-  "./assets/img/WhatsApp%20Image%202026-08-20%20at%2023.42.30.jpeg",
+  "./assets/img/tkode.jpeg",
   "./assets/img/WhatsApp%20Image%202026-08-21%20at%2001.00.04.jpeg",
 ];
 
