@@ -9,12 +9,23 @@
       name="description"
       content="Portfolio professionnel de Toussaint Koffi, développeur junior passionné par le web"
     />
+    <meta name="theme-color" content="#18252b" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/img/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
     <link rel="stylesheet" href="assets/css/index.css" />
 
     <link rel="stylesheet" href="assets/font/bootstrap-icons.css" />
+    <script src="assets/js/pwa.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
   </head>
 
   <body class="dark">
+    <div class="loading-screen" id="pageLoader" role="status" aria-live="polite">
+      <span class="loading-mark" aria-hidden="true">TK</span>
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <span>Chargement du portfolio...</span>
+    </div>
     <!-- Navigation Header -->
     <header>
       <nav>
@@ -32,7 +43,7 @@
           </li>
           <li class="item"><a href="#about">A propos</a></li>
           <li class="item"><a href="#projects">Projets</a></li>
-          <li class="item"><a href="certifications.html">Certifications</a></li>
+          <li class="item"><a href="certifications/">Certifications</a></li>
           <li class="item"><a href="#contact">Contact</a></li>
         </ul>
         <i
@@ -78,14 +89,7 @@
                 ><i class="bi bi-envelope-fill"></i
                 ><span class="social">Email</span></a
               >
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                class="reseau"
-                title="Facebook"
-                ><i class="bi bi-facebook"></i
-                ><span class="social">Facebook</span></a
-              >
+
               <a
                 href="https://wa.me/2250758331503"
                 target="_blank"
@@ -93,14 +97,6 @@
                 title="WhatsApp"
                 ><i class="bi bi-whatsapp"></i
                 ><span class="social">WhatsApp</span></a
-              >
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                class="reseau"
-                title="Instagram"
-                ><i class="bi bi-instagram"></i
-                ><span class="social">Instagram</span></a
               >
               <a href="https://www.tiktok.com/@m.koffii?is_from_webapp=1&sender_device=pc" target="_blank" class="reseau" title="TikTok"
                 ><i class="bi bi-tiktok"></i
@@ -186,7 +182,7 @@
                 <h4 class="dipl">
                   BTS Développeur d'Applications | <i>2025-2026</i>
                 </h4>
-                <p>Institut des Technologies d'Abidjan (ITA) - Bouaké</p>
+                <p>Institut De Formation Superieure ICK, Bouaké</p>
               </div>
               <div class="diplome">
                 <h4 class="dipl">
@@ -392,21 +388,11 @@
             <div class="social-links">
               <h4>Suivez-moi</h4>
               <div class="social-icons">
-                <a href="https://linkedin.com" target="_blank" title="LinkedIn"
+                <a href="https://www.linkedin.com/in/toussaint-koffi-7b2b2b2b2/" target="_blank" title="LinkedIn"
                   ><i class="bi bi-linkedin"></i
                 ></a>
-                <a href="https://facebook.com" target="_blank" title="Facebook"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  title="Instagram"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-                <a href="https://twitter.com" target="_blank" title="Twitter"
-                  ><i class="bi bi-twitter"></i
-                ></a>
+
+                </a>
                 <a href="https://www.tiktok.com/@m.koffii?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok"
                   ><i class="bi bi-tiktok"></i
                 ></a>
@@ -415,7 +401,7 @@
           </div>
 
           <form class="contact-form" action="https://formspree.io/f/xykdzppk" id="contactForm" method="POST">
-                <input type="hidden" name="_next" value="merci.html">
+                <input type="hidden" name="_next" value="merci/">
                 <input type="hidden" name="_replyto" value="">
                 <input type="hidden" name="_subject" value="Message depuis mon portfolio">
             <div class="form-group">
@@ -481,28 +467,25 @@
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
             <li><a href="#projects">Projets</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="certifications/">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Réseaux sociaux</h3>
           <div class="footer-social">
-            <a href="https://linkedin.com" target="_blank"
+            <a href="https://www.linkedin.com/in/toussaint-koffi-7b2b2b2b2/" target="_blank"
               ><i class="bi bi-linkedin"></i
-            ></a>
-            <a href="https://facebook.com" target="_blank"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="https://instagram.com" target="_blank"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="https://twitter.com" target="_blank"
-              ><i class="bi bi-twitter"></i
             ></a>
             <a href="https://www.tiktok.com/@m.koffii?is_from_webapp=1&sender_device=pc" target="_blank"
               ><i class="bi bi-tiktok"></i
                 ><span class="social">TikTok</span></a>
+                <a href="https://wa.me/1234567890" target="_blank"
+                  ><i class="bi bi-whatsapp"></i
+                ><span class="social">WhatsApp</span></a>
+                <a href="mailto:koffitoussaint370@gmail.com" target="_blank"
+                  ><i class="bi bi-envelope"></i
+                ><span class="social">Email</span></a>
           </div>
         </div>
       </div>

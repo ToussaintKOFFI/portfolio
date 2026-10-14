@@ -2,25 +2,38 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <base href="../" />
+    <link rel="shortcut icon" href="assets/img/WhatsApp Image 2026-08-20 at 23.42.30.jpeg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Certifications et diplômes de Toussaint Koffi" />
+    <meta name="theme-color" content="#18252b" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/img/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
     <title>Certifications et diplômes - Toussaint Koffi</title>
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/font/bootstrap-icons.css" />
+    <script src="assets/js/pwa.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
   </head>
   <body class="dark credentials-page">
+    <div class="loading-screen" id="pageLoader" role="status" aria-live="polite">
+      <span class="loading-mark" aria-hidden="true">TK</span>
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <span>Chargement des certifications...</span>
+    </div>
     <header>
       <nav>
-        <h1 class="logo"><a href="index.html"><img src="assets/img/WhatsApp%20Image%202026-08-20%20at%2023.42.30.jpeg" alt="Logo T.KODE" /></a></h1>
+        <h1 class="logo"><a href="./"><img src="assets/img/WhatsApp%20Image%202026-08-20%20at%2023.42.30.jpeg" alt="Logo T.KODE" /></a></h1>
         <button class="menu-toggle" id="menuToggle" type="button" title="Ouvrir le menu" aria-label="Ouvrir le menu">
           <span></span><span></span><span></span>
         </button>
         <ul class="items" id="navMenu">
-          <li class="item"><a href="index.html#home">Accueil</a></li>
-          <li class="item"><a href="index.html#about">À propos</a></li>
-          <li class="item"><a href="index.html#projects">Projets</a></li>
-          <li class="item"><a class="active" href="certifications.html">Certifications</a></li>
-          <li class="item"><a href="index.html#contact">Contact</a></li>
+          <li class="item"><a href="./#home">Accueil</a></li>
+          <li class="item"><a href="./#about">À propos</a></li>
+          <li class="item"><a href="./#projects">Projets</a></li>
+          <li class="item"><a class="active" href="certifications/">Certifications</a></li>
+          <li class="item"><a href="./#contact">Contact</a></li>
         </ul>
         <button id="icons" type="button" title="Changer le thème" aria-label="Changer le thème"><i class="bi bi-sun"></i></button>
       </nav>
@@ -34,8 +47,8 @@
         <article class="credential-card">
           <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
           <h2>BTS Développeur d'Applications</h2>
-          <p>Institut des Technologies d'Abidjan (ITA), Bouaké</p>
-          <span class="credential-meta">2025 - 2026 · En cours</span>
+          <p>Institut De Formation Superieure ICK, Bouaké</p>
+          <span class="credential-meta">2025 - 2026</span>
         </article>
         <article class="credential-card">
           <i class="bi bi-award-fill" aria-hidden="true"></i>
@@ -82,7 +95,7 @@
           </a>
         </div>
       </section>
-      <a class="bouton" href="index.html#contact" style="margin-top: 32px">Me contacter <i class="bi bi-arrow-right"></i></a>
+      <a class="bouton" href="./#contact" style="margin-top: 32px">Me contacter <i class="bi bi-arrow-right"></i></a>
     </main>
 
     <footer>

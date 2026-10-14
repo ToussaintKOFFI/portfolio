@@ -22,6 +22,11 @@ a { color: inherit; }
 button, input, textarea { font: inherit; }
 button { border: 0; background: transparent; }
 
+.loading-screen { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: var(--paper); color: var(--ink); font-size: .9rem; font-weight: 700; opacity: 1; visibility: visible; transition: opacity .35s ease, visibility .35s ease; }
+.loading-screen.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.loading-mark { color: var(--accent); font-size: 2.5rem; font-weight: 800; letter-spacing: -.08em; animation: loading-pulse 1.2s ease-in-out infinite; }
+.loading-spinner { width: 34px; height: 34px; border: 3px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: loading-spin .8s linear infinite; }
+
 header { position: fixed; inset: 0 0 auto; z-index: 10; height: 74px; background: var(--surface); border-bottom: 1px solid var(--line); }
 nav { width: min(1180px, calc(100% - 40px)); height: 100%; margin: auto; display: flex; align-items: center; gap: 28px; }
 .logo { display: flex; align-items: center; height: 100%; margin-right: auto; line-height: 0; }
@@ -131,6 +136,15 @@ footer { margin-top: 60px; padding: 48px 20px 18px; background: var(--footer-bg)
 .footer-bottom { width: min(1180px, 100%); margin: 34px auto 0; padding-top: 16px; border-top: 1px solid #52656b; text-align: center; color: var(--footer-muted); font-size: .8rem; }
 
 @keyframes appear { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes loading-spin { to { transform: rotate(360deg); } }
+@keyframes loading-pulse { 50% { opacity: .55; transform: scale(.94); } }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease var(--reveal-delay, 0ms), transform .65s ease var(--reveal-delay, 0ms); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
 
 @media (max-width: 900px) {
   .section1 { grid-template-columns: 1fr; gap: 35px; text-align: center; }
