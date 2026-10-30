@@ -19,7 +19,7 @@ if (pageLoader) {
 }
 
 const revealElements = document.querySelectorAll(
-  ".section1 > .image, .section1 > .description, #about .title, #about .profil, #about .resumes, #about .informatique, #about .diplome, #about .language-item, #about .skill-list li, #projects .section-title, .project-card, #contact .section-title, .contact-info, .detail-item, .contact-form, .credentials-main > .desc, .credentials-main > .title, .credentials-main > .credentials-intro, .credential-card, .certificates-section, .certificate-link, .credentials-main > .bouton, .footer-section, .footer-bottom",
+  ".section1 > .image, .section1 > .description, #about .title, #about .profil, #about .about-panel, #about .timeline-card, #about .approach-strip, #about .language-item, #skills .section-title, #skills .skill-card, #projects .section-title, .project-card, #contact .section-title, .contact-info, .detail-item, .contact-form, .credentials-main > .desc, .credentials-main > .title, .credentials-main > .credentials-intro, .credential-card, .certificates-section, .certificate-link, .credentials-main > .bouton, .footer-section, .footer-bottom",
 );
 
 if (
@@ -27,7 +27,7 @@ if (
   !window.matchMedia("(prefers-reduced-motion: reduce)").matches
 ) {
   const staggerGroupSelector =
-    ".informatique, .diplome, .language-item, .skill-list li, .project-card, .detail-item, .credential-card, .certificate-link";
+    ".about-panel, .timeline-card, .language-item, .skill-card, .project-card, .detail-item, .credential-card, .certificate-link";
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {

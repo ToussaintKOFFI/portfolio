@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="assets/img/tkode.jpeg" type="image/jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Certifications et diplômes de Toussaint Koffi" />
-    <meta name="theme-color" content="#18252b" />
+    <meta name="theme-color" content="#05070D" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="assets/img/icon-192.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/font/bootstrap-icons.css" />
     <script src="assets/js/pwa.js" defer></script>
     <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/view-counter.js" defer></script>
+    <script src="assets/js/portfolio.js" defer></script>
   </head>
   <body class="dark credentials-page">
     <div class="loading-screen" id="pageLoader" role="status" aria-live="polite">
@@ -22,20 +24,29 @@
       <span class="loading-spinner" aria-hidden="true"></span>
       <span>Chargement des certifications...</span>
     </div>
-    <header>
-      <nav>
-        <h1 class="logo"><a href="./"><img src="assets/img/tkode.jpeg" alt="Logo T.KODE" /></a></h1>
-        <button class="menu-toggle" id="menuToggle" type="button" title="Ouvrir le menu" aria-label="Ouvrir le menu">
-          <span></span><span></span><span></span>
+    <header class="site-header">
+      <nav aria-label="Navigation principale">
+        <h1 class="logo"><a href="./" aria-label="T.KODE — accueil"><img src="assets/img/tkode.jpeg" alt="" /><span>T.KODE<span class="brand-dot">.</span></span></a></h1>
+        <button class="menu-toggle" id="menuToggle" type="button" title="Ouvrir le menu" aria-label="Ouvrir le menu" aria-controls="navMenu" aria-expanded="false">
+          <span class="menu-beam beam-one" aria-hidden="true"></span>
+          <span class="menu-beam beam-two" aria-hidden="true"></span>
+          <span class="menu-beam beam-three" aria-hidden="true"></span>
+          <i class="menu-spark spark-one" aria-hidden="true"></i>
+          <i class="menu-spark spark-two" aria-hidden="true"></i>
+          <i class="menu-spark spark-three" aria-hidden="true"></i>
+          <i class="menu-spark spark-four" aria-hidden="true"></i>
+          <i class="menu-spark spark-five" aria-hidden="true"></i>
+          <i class="menu-spark spark-six" aria-hidden="true"></i>
         </button>
-        <ul class="items" id="navMenu">
-          <li class="item"><a href="./#home">Accueil</a></li>
-          <li class="item"><a href="./#about">À propos</a></li>
-          <li class="item"><a href="./#projects">Projets</a></li>
-          <li class="item"><a class="active" href="certifications/">Certifications</a></li>
-          <li class="item"><a href="./#contact">Contact</a></li>
+        <ul class="items" id="navMenu" inert>
+          <li class="item"><a href="./#home" data-index="01">Accueil</a></li>
+          <li class="item"><a href="./#about" data-index="02">À propos</a></li>
+          <li class="item"><a href="./#skills" data-index="03">Compétences</a></li>
+          <li class="item"><a href="./#projects" data-index="04">Projets</a></li>
+          <li class="item"><a href="./#contact" data-index="05">Contact</a></li>
+          <li class="item"><a class="active" href="certifications/" data-index="06">Certifications</a></li>
         </ul>
-        <button id="icons" type="button" title="Changer le thème" aria-label="Changer le thème"><i class="bi bi-sun"></i></button>
+        <button class="theme-toggle" id="icons" type="button" title="Changer le thème" aria-label="Passer au thème clair"><i class="bi bi-sun" aria-hidden="true"></i></button>
       </nav>
     </header>
 
@@ -99,18 +110,21 @@
     </main>
 
     <footer>
-      <div class="footer-bottom" style="margin-top: 0">© 2026 Toussaint Koffi. Tous droits réservés.</div>
+      <div class="footer-bottom" style="margin-top: 0">
+        <p>© 2026 Toussaint Koffi. Tous droits réservés.</p>
+        <p class="footer-views" role="status" aria-live="polite">
+          <i class="bi bi-eye" aria-hidden="true"></i>
+          <span>Vues du portfolio</span>
+          <img
+            class="view-counter-badge"
+            data-counter-url="https://hits.sh/toussaintkoffi.github.io-portfolio.svg?label=Total&color=ef8c5d&labelColor=22353b"
+            alt="Compteur de vues en chargement"
+            width="56"
+            height="20"
+            referrerpolicy="no-referrer"
+          />
+        </p>
+      </div>
     </footer>
-    <script>
-      const menuToggle = document.getElementById("menuToggle");
-      const navMenu = document.getElementById("navMenu");
-      const themeButton = document.getElementById("icons");
-      menuToggle.addEventListener("click", () => navMenu.classList.toggle("active"));
-      navMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => navMenu.classList.remove("active")));
-      themeButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        themeButton.innerHTML = document.body.classList.contains("dark") ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
-      });
-    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = "toussaint-portfolio-v8";
+const CACHE_NAME = "toussaint-portfolio-v18";
 const APP_SHELL = [
   "./",
   "./certifications/",
@@ -6,6 +6,9 @@ const APP_SHELL = [
   "./manifest.webmanifest",
   "./assets/js/pwa.js",
   "./assets/js/animations.js",
+  "./assets/js/view-counter.js",
+  "./assets/js/portfolio.js",
+  "./assets/js/project-nexus.js",
   "./assets/css/index.css",
   "./assets/font/bootstrap-icons.css",
   "./assets/font/fonts/bootstrap-icons.woff",
@@ -13,6 +16,8 @@ const APP_SHELL = [
   "./assets/img/icon-192.png",
   "./assets/img/icon-512.png",
   "./assets/img/tkode.jpeg",
+  "./assets/img/project-portfolio.jpg",
+  "./assets/img/project-landing-page.jpg",
   "./assets/img/WhatsApp%20Image%202026-08-21%20at%2001.00.04.jpeg",
 ];
 
